@@ -124,7 +124,7 @@ var cartas = [
   }
   
   function obtemAtributoMaquina() {
-    const max = -Infinity;
+    let max = -Infinity;
     let maxIndex;
     for (let i = 0; i < Object.keys(cartasMaquina[0].atributos).length; i++) {
       if (Object.values(cartasMaquina[0].atributos)[i] > max) {
