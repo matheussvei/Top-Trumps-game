@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>
+    Top Trumps
+  </title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="page-title">Top Trumps</h1> <br>
+    <button onclick="sortearCarta()" id="btnSortear">Mix Cards</button>
+    <form id="form">
+      <h2>Choose your attribute!</h2>
+      <div class="wrapper">
+        <div>
+          <div id="carta-jogador">
+            <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/card-super-trunfo-transparent-ajustado.png" style=" width: inherit; height: inherit; position: absolute;">
+            <h3></h3>
+          </div>
+        </div>
+        <div>
+          <div id="carta-maquina" class="carta"><img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/card-super-trunfo-transparent-ajustado.png" style=" width: inherit; height: inherit; position: absolute;"></div>
+        </div>
+      </div>
+      <div id="resultado"></div>
+      <div id="botoes">
+        <button class="botao" type="button" id="btnJogar" onclick="jogar()" disabled="false">Your Turn</button>
+        <button class="botao" type="button" id="mqnJogar" onclick="vezMaquina()" disabled="">Machine's Turn</button>
+        <br>
+        <button class="botao" type="button" id="proxRod" onclick="proxRodada()" disabled="true">Next Round</button>
+      </div>
+
+      <div id="jogarNovamente"> </div>
+    </form>
+  </div>
+</body>
+<script src="code.js"></script>
+</html>
