@@ -1,4 +1,4 @@
-var cartas = [
+let cartas = [
     {
       nome: "Bulbassauro",
       imagem:
@@ -110,7 +110,6 @@ var cartas = [
     exibirCartaJogador();
     turno = parseInt(Math.random() * 2);
     document.getElementById("btnSortear").disabled = true;
-    console.log(turno);
     selTurno();
   }
   
@@ -132,7 +131,6 @@ var cartas = [
         maxIndex = Object.values(cartasMaquina[0].atributos).indexOf(max);
       }
     }
-    console.log(cartasMaquina[0], max, maxIndex);
     return (atributoSelecionado = Object.keys(cartasMaquina[0].atributos)[
       maxIndex
     ]);
@@ -179,13 +177,11 @@ var cartas = [
       cartasMaquina.push(cartasMaquina[0]);
       cartasMaquina.shift();
     }
-    console.log(turno);
     divResultado.innerHTML = htmlResultado;
   }
   
   function jogar() {
     let atributoSelecionado = obtemAtributoJogador();
-    console.log(atributoSelecionado);
     exibirCartaMaquina();
     compararCartas();
     endgame();
@@ -196,7 +192,6 @@ var cartas = [
   
   function vezMaquina() {
     let atributoSelecionado = obtemAtributoMaquina();
-    console.log(atributoSelecionado);
     exibirCartaMaquina();
     compararCartas();
     endgame();
@@ -255,7 +250,6 @@ var cartas = [
       '<img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/card-super-trunfo-transparent.png" style=" width: inherit; height: inherit; position: absolute;">';
     document.getElementById("proxRod").disabled = true;
     selTurno();
-    console.log(cartasJogador);
   }
   
   function endgame() {
